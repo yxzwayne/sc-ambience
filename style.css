@@ -1,0 +1,117 @@
+@font-face {
+    font-family: "Berkeley Mono";
+    src: url("assets/fonts/BerkeleyMono-Regular.woff2");
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100vh;
+    font-family: -apple-system, "Inter", "Helvetica Neue", "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+}
+
+h1 {
+    margin-bottom: 0.2rem;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #00acc3;
+}
+
+.container {
+    text-align: center;
+}
+
+.race-selector {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: start;
+    align-items: center;
+}
+
+select {
+    border: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.5rem;
+    background-color: #eee;
+    font-size: 1rem;
+}
+
+select:focus {
+    border-color: #007BFF;
+    /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Add shadow on focus */
+}
+
+
+.control {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    border: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    background-color: #eee;
+    font-size: 1rem;
+}
+
+button:hover,
+button:focus {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.current {
+    display: none;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+audio {
+    display: none;
+}
+
+#trackName {
+    font-family: "Berkeley Mono", monospace;
+    color: #00acc3;
+}
+
+
+/* Style the footer */
+footer {
+    font-size: 0.8rem;
+    font-family: "Berkeley Mono", monospace;
+    letter-spacing: -0.02rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}

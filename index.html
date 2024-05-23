@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starcraft Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Starcraft Music Player</h1>
+    <p class="subtitle">Play the ambience music back to back just like in game.</p>
+
+    <div class="race-selector">
+        <p>Which race are we feeling?</p>
+        <select id="musicCollection">
+            <option value="terran">Terran</option>
+            <option value="protoss">Protoss</option>
+            <option value="zerg">Zerg</option>
+        </select>
+    </div>
+
+    <p>Hit <span style="font-family: 'Berkeley Mono', monospace;">Start</span> below, set and forget.</p>
+
+    <div class="control">
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="next">Next</button>
+    </div>
+
+    <div class="current">
+        <p>Current Track</p>
+        <div id="trackName"></div>
+    </div>
+
+    <audio id="audioPlayer" controls></audio>
+
+    <footer>
+        <p>&copy; 2024 Starcraft Music Player</p>
+        <a href="https://github.com/yxzwayne/sc-ambience" target="_blank">Source</a>
+        <p>Made by <a href="https://yxzwayne.com" target="_blank">Wayne</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+</html>
+
+</html>
