@@ -1,17 +1,25 @@
 const terranMusic = [
+    "audio/terran/music/zswarm_music_cutscenemoment2.wav",
+    "audio/terran/music/the_rescue_full.wav",
     "audio/terran/music/terransc2-05.wav",
     "audio/terran/music/terransc2-04.wav",
+    "audio/terran/music/zswarm_music_darkvictory_livefull.wav",
     "audio/terran/music/zswarm_music_gs_terran9.wav",
     "audio/terran/music/sc1_terran4.wav",
     "audio/terran/music/terransc2-03.wav",
+    "audio/terran/music/zswarm_music_inspirational_livefull.wav",
     "audio/terran/music/sc1_terran1.wav",
     "audio/terran/music/terransc2-02.wav",
     "audio/terran/music/sc1_terran3.wav",
     "audio/terran/music/sc1_terran2.wav",
     "audio/terran/music/terransc2-01.wav",
+    "audio/terran/music/zswarm_music_sadominouslivefull.wav",
     "audio/terran/music/zswarm_music_gs terran8.wav",
     "audio/terran/music/zswarm_music_terran6.wav",
-    "audio/terran/music/zswarm_music_terran7_action.wav"
+    "audio/terran/music/zswarm_music_terran7_action.wav",
+    "audio/terran/music/zswarm_music_cutscenemoment2_ambient.wav",
+    "audio/terran/music/zswarm_music_lowtensioninspirationallivealt.wav",
+    "audio/terran/music/zswarm_music_titan_full.wav",
 ];
 
 const protossMusic = [
@@ -49,6 +57,7 @@ const zergMusic = [
 ]
 
 let currentAudioIndex = 0;
+
 let isPlaying = false;
 let currentMusicCollection = terranMusic;
 const audioPlayer = document.getElementById('audioPlayer');
@@ -70,10 +79,7 @@ pauseButton.addEventListener('click', () => {
 });
 
 nextButton.addEventListener('click', () => {
-    currentAudioIndex = (currentAudioIndex + 1) % currentMusicCollection.length;
-    audioPlayer.src = currentMusicCollection[currentAudioIndex];
-    audioPlayer.play();
-    updateTrackName(); // Add this line to update the track name
+    playAudio();
 });
 
 audioPlayer.addEventListener('ended', () => {
@@ -100,7 +106,12 @@ musicCollectionDropdown.addEventListener('change', (event) => {
 });
 
 function playAudio() {
-    currentAudioIndex = Math.floor(Math.random() * currentMusicCollection.length);
+    let newAudioIndex;
+    do {
+        newAudioIndex = Math.floor(Math.random() * currentMusicCollection.length);
+    } while (newAudioIndex === currentAudioIndex);
+
+    currentAudioIndex = newAudioIndex;
     audioPlayer.src = currentMusicCollection[currentAudioIndex];
     audioPlayer.play();
     updateTrackName();
